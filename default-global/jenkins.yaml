@@ -14,7 +14,7 @@ kube:
 unclassified:
   gitHubPluginConfig:
     configs:
-      - credentialsId: "github-token"
+      - credentialsId: "GitToken"
         name: "GitHub"
     hookUrl: "$JENKINS_BASE_URL/github-webhook/"
   globalLibraries:
@@ -28,7 +28,7 @@ unclassified:
           modernSCM:
             scm:
               git:
-                credentialsId: "github-key"
+                credentialsId: "GitToken"
                 remote: "git@github.com:ryecarrigan/pipeline-libraries.git"
   hibernationConfiguration:
     enabled: false
