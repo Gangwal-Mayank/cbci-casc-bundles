@@ -41,6 +41,7 @@ plugins:
 - id: display-url-api
 - id: durable-task
 - id: echarts-api
+- id: electricflow
 - id: font-awesome-api
 - id: git
 - id: git-client
