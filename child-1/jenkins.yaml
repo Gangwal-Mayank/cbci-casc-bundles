@@ -1,7 +1,5 @@
 jenkins:
-  systemMessage: |-
-    ${controller_word} ${controller_child} #${controller_number}:
-    Jenkins configured using CasC Child Inheritance
+  systemMessage: "Jenkins configured using CasC Child Inheritance"
 unclassified:
   buildDiscarders:
     configuredBuildDiscarders:
