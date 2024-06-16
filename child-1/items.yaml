@@ -1,0 +1,65 @@
+removeStrategy:
+  items: "none"
+  rbac: "sync"
+items:
+  - kind: "pipeline"
+    name: "pipeline_test"
+    concurrentBuild: true
+    definition:
+      cpsFlowDefinition:
+        sandbox: true
+        script: |
+          pipeline {
+              agent {
+                  kubernetes {
+                      yaml '''
+          apiVersion: v1
+          kind: Pod
+          spec:
+            containers:
+            - name: "python"
+              image: "jenkins/jnlp-agent-python"
+              tty: true
+              command:
+              - cat
+          '''
+                      defaultContainer 'python'
+                  }
+              }
+
+              stages {
+                  stage('Environment') {
+                      steps {
+                          echo 'Printing environment variables for ${controller_word} ${controller_child} #${controller_number}'
+                          sh 'python --version'
+                          sh 'env'
+                      }
+                  }
+              }
+          }
+    description: "A test pipeline"
+    disabled: false
+    displayName: "Pipeline Test"
+    resumeBlocked: false
+  - kind: "cloudbeesTemplatedJob"
+    name: "hello-world-test"
+    catalog: "timPlateCatalog" 
+    model: "hello-world-feature-test" 
+    attributes: 
+      - value: template-alpha 
+        key: name
+      - value: the description
+        key: description
+      - value: pwd
+        key: command
+  - kind: "folder"
+    name: project-alpha
+    displayName: "Project Alpha"
+    description: "Project Alpha is going to change the world!"
+    groups:
+      - name: "Project Alpha Developers"
+        members:
+          external_groups:
+            - developer
+        roles:
+          - name: "developer"
