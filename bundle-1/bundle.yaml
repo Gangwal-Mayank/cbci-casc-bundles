@@ -6,3 +6,5 @@ availabilityPattern: '.*'
 parent: "bundle-global"
 items:
   - "items.yaml"
+plugins:
+  - "plugins.yaml"
