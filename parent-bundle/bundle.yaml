@@ -1,0 +1,9 @@
+apiVersion: '1'
+id: 'default-2.426.3.3'
+description: 'Default base bundle for controllers'
+availabilityPattern: '.*'
+version: '1'
+jcasc:
+  - 'jenkins.yaml'
+plugins:
+  - 'plugins.yaml'
