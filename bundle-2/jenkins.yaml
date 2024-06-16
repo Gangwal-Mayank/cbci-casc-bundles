@@ -4,8 +4,3 @@ unclassified:
   buildDiscarders:
     configuredBuildDiscarders:
     - "jobBuildDiscarder"
-    - simpleBuildDiscarder:
-        discarder:
-          logRotator:
-            daysToKeepStr: "10"
-            numToKeepStr: "10"
