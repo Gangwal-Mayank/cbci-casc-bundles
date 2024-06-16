@@ -30,7 +30,7 @@ items:
               stages {
                   stage('Environment') {
                       steps {
-                          echo 'Printing environment variables for ${controller_word} ${controller_child} #${controller_number}'
+                          echo 'Printing Python Version'
                           sh 'python --version'
                           sh 'env'
                       }
