@@ -41,25 +41,3 @@ items:
     disabled: false
     displayName: "Pipeline Test"
     resumeBlocked: false
-  - kind: "cloudbeesTemplatedJob"
-    name: "hello-world-test"
-    catalog: "timPlateCatalog" 
-    model: "hello-world-feature-test" 
-    attributes: 
-      - value: template-alpha 
-        key: name
-      - value: the description
-        key: description
-      - value: pwd
-        key: command
-  - kind: "folder"
-    name: project-alpha
-    displayName: "Project Alpha"
-    description: "Project Alpha is going to change the world!"
-    groups:
-      - name: "Project Alpha Developers"
-        members:
-          external_groups:
-            - developer
-        roles:
-          - name: "developer"
