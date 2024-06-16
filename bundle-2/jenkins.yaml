@@ -1,0 +1,6 @@
+jenkins:
+  systemMessage: "Controller configured using CloudBees CasC bundle inheritance"
+unclassified:
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
