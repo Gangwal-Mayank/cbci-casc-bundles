@@ -20,10 +20,3 @@ unclassified:
   usageStatisticsCloudBees:
     disabledJenkinsUsageStatistics: true
     usageStatisticsCollected: false
-globalCloudBeesPipelineTemplateCatalog: 
-  catalogs:
-  - branchOrTag: "main"
-    scm:
-      git:
-        remote: "https://github.com/Gangwal-Mayank/cbci-casc-bundles.git"
-    updateInterval: "1d"
